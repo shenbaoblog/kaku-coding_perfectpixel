@@ -1,0 +1,446 @@
+// -------------------------------
+// クリアフィックス
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+// -------------------------------
+// タブレット以上のサイズで電話クリック無効化
+
+a[href*="tel:"] {
+  text-decoration: none;
+}
+@include mq("tab") {
+  a[href*="tel:"] {
+    color: $cBlack;
+    pointer-events: none;
+  }
+}
+
+// -------------------------------
+// ファーストビュー（トップページ）
+.bl_hero {
+  position: absolute;
+  top: 92px;
+  left: 26px;
+  &_wrapper {
+    position: relative;
+    margin-top: 60px;
+  }
+  &_img {
+    position: relative;
+    height: 360px;
+    background-image: url("../img/bg_hero_01_sp.jpg");
+    background-position: right center;
+    background-size: cover;
+    // object-fit: cover;
+    // object-position: 100% right;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $cHeroCover;
+      content: "";
+    }
+  }
+  &_txt {
+    color: $cWhite;
+    font-family: "Noto Serif JP Compressed";
+    font-size: 24px;
+    letter-spacing: .2em;
+    // font-weight: bold;
+  }
+}
+@include mq("tab") {
+  .bl_hero_img {
+    background-image: url("../img/bg_hero_01.jpg");
+  }
+}
+@include mq("pc") {
+  .bl_hero {
+    top: 232px;
+    left: 103px;
+    &_wrapper {
+      margin-top: 80px;
+    }
+    &_img {
+      height: 610px;
+      &::after {
+        height: 610px;
+      }
+    }
+    &_txt {
+      font-size: 36px;
+      letter-spacing: .2em;
+    }
+  }
+}
+
+// -------------------------------
+// お知らせ
+.bl_notice {
+  position: relative;
+  margin-top: -40px;
+  padding: 36px 20px 42px 18px;
+  background-color: $cWhite;
+  &_wrapper {
+    // position: relative;
+    padding: 0 20px 52px 20px;
+    background-color: $cBgGrey;
+  }
+  &_ttl {
+    margin-bottom: 25px;
+  }
+  &_li {
+    margin-bottom: 25px;
+  }
+  &_info {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &_date {
+    margin-right: 13px;
+    font-size: 14px;
+    letter-spacing: .082em;
+  }
+  &_icon {
+    display: inline-block;
+    height: 20px;
+    margin-top: -1px;
+    padding: 2px 8px 1px 10px;
+    background-color: $cGreen;
+    color: $cWhite;
+    font-size: 11px;
+    letter-spacing: .05em;
+  }
+  &_txt {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: .05em;
+  }
+}
+@include mq("pc") {
+  .bl_notice {
+    max-width: 960px;
+    margin: -80px auto 0 auto;
+    padding: 72px 79px 81px 79px;
+    padding-top: 72px;
+    &_wrapper {
+      padding-bottom: 100px;
+    }
+    &_ttl {
+      margin-bottom: 54px;
+    }
+    &_ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    &_li {
+      width: calc((100% - 60px) / 2);
+      margin: 0 60px 46px 0;
+      margin-right: 60px;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    &_info {
+      margin-bottom: 14px;
+    }
+    &_icon {
+      font-size: 12px;
+    }
+    &_txt {
+      line-height: 1.7;
+    }
+    &_btn {
+      font-size: 15px;
+    }
+  }
+}
+
+// -------------------------------
+// 取扱い家具
+.bl_furniture {
+  &_wrapper {
+    padding: 32px 20px 41px 20px;
+  }
+  &_ttl {
+    margin-bottom: 54px;
+  }
+}
+@include mq("pc") {
+  .bl_furniture {
+    max-width: 1280px;
+    margin: 0 auto;
+    &_wrapper {
+      padding-top: 77px;
+    }
+    &_ttl {
+      margin-bottom: 42px;
+    }
+    &_btn {
+      // font-size: 15px;
+    }
+  }
+}
+
+// -------------------------------
+// 転売
+.bl_sell {
+  &_wrapper {
+    padding: 40px 20px 113px 20px;
+    background-color: $cBgGrey;
+  }
+  &_item {
+    margin-bottom: 55px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &_figure {
+    margin-bottom: 25px;
+    &.bl_sell_figure__online {
+      margin-bottom: 22px;
+    }
+  }
+  &_ttl {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: .05em;
+  }
+  &_txt {
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: .05em;
+    &.bl_sell_txt__online {
+      margin-bottom: 24px;
+    }
+  }
+}
+@include mq("pc") {
+  .bl_sell {
+    max-width: 1280px;
+    margin: 0 auto;
+    &_wrapper {
+      padding-top: 78px;
+      padding-bottom: 100px;
+    }
+    &_item {
+      display: flex;
+      margin-bottom: 60px;
+    }
+    &_figure {
+      flex-basis: 380px;
+      margin-right: 70px;
+      margin-bottom: 0;
+      &.bl_sell_figure__online {
+        margin-bottom: 0;
+      }
+    }
+    &_ttl {
+      margin-top: -4px;
+      margin-left: -1px;
+    }
+    &_txt {
+      margin-bottom: 46px;
+      &.bl_sell_txt__online {
+        margin-bottom: 45px;
+      }
+    }
+  }
+}
+
+// -------------------------------
+// 採用情報
+.bl_recruit {
+  color: $cWhite;
+  &_wrapper {
+    padding: 35px 20px 40px 20px;
+  }
+  &_ttl {
+    margin-bottom: 27px;
+  }
+  &_txt {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 2.15;
+    letter-spacing: .2em;
+    text-align: center;
+  }
+}
+@include mq("pc") {
+  .bl_recruit {
+    .el_supplement {
+      color: $cWhite;
+    }
+    &_wrapper {
+      padding-top: 75px;
+      padding-bottom: 79px;
+    }
+    &_ttl {
+      margin-bottom: 41px;
+    }
+    &_txt {
+      margin-right: -1px;
+      margin-bottom: 54px;
+      font-size: 16px;
+      line-height: 2;
+    }
+    &_btn {
+      padding: 14px;
+      font-size: 14px;
+    }
+  }
+}
+
+// -------------------------------
+// トップページへ戻る
+.bl_toTop {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  right: 10px;
+  bottom: 74px;
+  z-index: 10000;
+  transform: translateY(20px);
+
+// box-shadow: 0 0 0 4px $cWhite;
+  transition: $transition;
+
+  &_chevron {
+    display: block;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border: 4px solid darken($cOrange, 13%);
+    background-color: darken($cOrange, 13%);
+    transition: $transition;
+    &::before {
+      position: absolute;
+      top: 8px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: rotate(135deg);
+      width: 12px;
+      height: 12px;
+      margin: auto;
+      border: 4px solid $cWhite;
+      border-top: none;
+      border-right: none;
+      content: "";
+      transition: $transition;
+    }
+    &:active {
+      background-color: $cWhite;
+      &::before {
+        border-color: darken($cOrange, 13%);
+      }
+    }
+  }
+  &.js_visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@include mq("tab") {
+  .bl_toTop {
+    right: 20px;
+    bottom: 20px;
+    &_chevron {
+      width: 64px;
+      height: 64px;
+      &::before {
+        top: 12px;
+        width: 20px;
+        height: 20px;
+      }
+      &:hover {
+        background-color: $cWhite;
+        &::before {
+          border-color: darken($cOrange, 13%);
+        }
+      }
+    }
+  }
+}
+
+// -------------------------------
+// 下タブ
+.bl_fixedFooter {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  z-index: 10000;
+  width: 100%;
+  padding: 10px;
+  box-shadow: $cBoxShadow;
+  background-color: $cWhite;
+  &_area {
+    flex: 1 1 100%;
+    margin: 0 3px;
+    padding: 10px 5px;
+
+// border-radius: 5px;
+    background-color: $cWhite;
+    text-decoration: none;
+    transition: $transition;
+
+    &.bl_fixedFooter_area__access {
+      border: 2px solid $cBlue;
+      background-color: $cBlue;
+      &:active {
+        background-color: $cWhite;
+      }
+      &:active > .bl_fixedFooter_txt {
+        color: $cBlue;
+      }
+    }
+    &.bl_fixedFooter_area__call {
+      border: 2px solid $cGreen;
+      background-color: $cGreen;
+      &:active {
+        background-color: $cWhite;
+      }
+      &:active > .bl_fixedFooter_txt {
+        color: $cGreen;
+      }
+    }
+  }
+  &_txt {
+    color: $cWhite;
+    text-align: center;
+  }
+}
+
+@include mq("tab") {
+  .bl_fixedFooter {
+    display: none;
+  }
+}
+
+// -------------------------------
+// 接骨院情報
+.bl_info {
+  margin-top: 20px;
+  &_txtWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  &_ttl {
+    flex-shrink: 0;
+    width: 5.5em;
+    font-weight: bold;
+  }
+  &_description {
+    text-indent: -1em;
+  }
+}

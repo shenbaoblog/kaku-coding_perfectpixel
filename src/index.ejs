@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <%# ##_headを読み込み## %>
+  <%- include('./_head.ejs', {CONFIG: config["index"]}); %>
+  <!-- <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "name": "●●",
+    "description":"●●",
+    "telephone": "●●", //電話番号
+    "url": "https://●●.com/",
+    "priceRange":"100-10000", //平均的な予算
+    "sameAs":[
+      "https://twitter.com/●●"
+    ] ,
+    "image": [
+      "https://●●/img/staff_img01.jpg",
+      "https://●●/img/treatment_img03.jpg",
+      "https://●●/img/patient_photo_img01.jpg"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "JP",
+      "postalCode": "000-0000",
+      "addressRegion": "群馬県",
+      "addressLocality": "●●市●●町",
+      "streetAddress": "0-0-0"
+    },
+    "openingHoursSpecification": [ //営業日と営業時間
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+        "月曜",
+        "火曜",
+        "水曜",
+        "木曜",
+        "金曜",
+        "土曜"
+    ],
+    "opens": "10:00", //開店時間
+    "closes": "20:00" //閉店時間
+    },
+    { //定休日
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+      "日曜",
+      "祝日"
+    ],
+    "opens": "00:00", //定休日のため開店時間は00:00
+    "closes": "00:00" //定休日のため閉店時間も00:00
+    }
+    ]
+  }
+  </script> -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER -->
+  <%# ----------------_headerを読み込む---------------- %>
+  <%- include('./_header.ejs') %>
+  <!-- HEADER -->
+
+
+  <main>
+
+    <!-- FIRST VIEW -->
+    <div class="bl_hero_wrapper">
+      <div class="bl_hero_img"></div>
+      <div class="bl_hero">
+        <p class="bl_hero_txt">自分らしさを<br class="hp_spExist">レイアウトする</p>
+      </div>
+    </div>
+    <!-- / FIRST VIEW -->
+
+    <!-- お知らせ -->
+    <section class="bl_notice_wrapper">
+      <div class="bl_notice">
+        <div class="bl_notice_inner">
+          <div class="bl_notice_ttl">
+            <h2 class="el_h2_01">お知らせ</h2>
+            <p class="el_supplement el_supplement__notice">NEWS</p>
+          </div>
+          <ul class="bl_notice_ul">
+            <li class="bl_notice_li">
+              <div class="bl_notice_info">
+                <span class="bl_notice_date">2020.01.28</span>
+                <span class="el_icon bl_notice_icon">ニュースリリース</span>
+              </div>
+              <p class="bl_notice_txt">「KAGU FANTASIA」が2020年X月XX日（月）東京・原宿にオープン</p>
+            </li>
+            <li class="bl_notice_li">
+              <div class="bl_notice_info">
+                <span class="bl_notice_date">2020.01.12</span>
+                <span class="el_icon bl_notice_icon">ニュースリリース</span>
+              </div>
+              <p class="bl_notice_txt">新春キャンペーンを実施</p>
+            </li>
+            <li class="bl_notice_li">
+              <div class="bl_notice_info">
+                <span class="bl_notice_date">2019.12.26</span>
+                <span class="el_icon bl_notice_icon">お知らせ</span>
+              </div>
+              <p class="bl_notice_txt">年末年始の営業日についてのお知らせ</p>
+            </li>
+            <li class="bl_notice_li">
+              <div class="bl_notice_info">
+                <span class="bl_notice_date">2019.11.09</span>
+                <span class="el_icon bl_notice_icon">ニュースリリース</span>
+              </div>
+              <p class="bl_notice_txt">人気ライフスタイル雑誌『KAGUGU』とのコラボ商品が登場</p>
+            </li>
+          </ul>
+          <a href="#" class="el_btn bl_notice_btn">お知らせ一覧へ</a>
+        </div>
+      </div>
+    </section>
+    <!-- / お知らせ -->
+
+
+    <!-- 取扱家具 -->
+    <section class="bl_furniture_wrapper">
+
+      <div class="bl_furniture">
+        <div class="bl_furniture_ttl">
+          <h2 class="el_h2_01 el_h2_01__furniture">取扱い家具</h2>
+          <p class="el_supplement">FURNITURE</p>
+        </div>
+
+        <div class="bl_card_wrapper">
+          <div class="bl_card bl_card__pcBig bl_card__alternation">
+            <figure class="bl_card_figure">
+              <img src="./img/img_furniture_01.jpg" alt="" class="bl_card_img">
+            </figure>
+            <div class="bl_card_info">
+              <p class="bl_card_ttl">テーマで探す</p>
+              <p class="bl_card_txt">モダン、ナチュラル、北欧、ヴィンテージ、和風、ハワイアン、アメリカン、ミニマルなど、テーマごとに家具をお探しいただけます。</p>
+              <a href="#" class="el_btn bl_card_btn">取扱い家具の一覧へ</a>
+            </div>
+          </div>
+        </div>
+        <div class="bl_colItem bl_card_wrapper">
+          <div class="bl_card bl_card__pcBig bl_card__alternation">
+            <figure class="bl_card_figure">
+              <img src="./img/img_furniture_01.jpg" alt="" class="bl_card_img">
+            </figure>
+            <div class="bl_card_info">
+              <p class="bl_card_ttl">カラーで探す</p>
+              <p class="bl_card_txt bl_card_txt__color">
+                レッド、ブルー、グリーン、イエロー、オレンジ、ピンク、パープル、ベージュ・アイボリー、ブラウン、ブラック、グレー、ホワイトなど、好みのカラーごとに家具をお探しいただけます。</p>
+              <a href="#" class="el_btn bl_card_btn">取扱い家具の一覧へ</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bl_colUnit bl_colUnit__col123">
+          <div class="bl_colItem bl_card_wrapper">
+            <div class="bl_card">
+              <figure class="bl_card_figure">
+                <img src="./img/img_furniture_01.jpg" alt="" class="bl_card_img">
+              </figure>
+              <div class="bl_card_info">
+                <p class="bl_card_ttl">シーンで探す</p>
+                <p class="bl_card_txt bl_card_txt__scene">
+                  「リビング」や「ダイニング」、「寝室・ベッドルーム」、「キッチン」、「玄関・エントランス」、「書斎・ホームオフィス」などのシーンから、それぞれのシーンで使用する家具をお探しいただけます。</p>
+                <a href="#" class="el_btn bl_card_btn">ONLINE STORE</a>
+              </div>
+            </div>
+          </div>
+          <div class="bl_colItem bl_card_wrapper">
+            <div class="bl_card">
+              <figure class="bl_card_figure">
+                <img src="./img/img_furniture_01.jpg" alt="" class="bl_card_img">
+              </figure>
+              <div class="bl_card_info">
+                <p class="bl_card_ttl">ブランドで探す</p>
+                <p class="bl_card_txt bl_card_txt__brand">他では出会えないソファやチェアが見つかります。<br>
+                  当社ブランド以外でも、セレクトラインアップの中で多数のブランドをお取扱いしております。</p>
+                <a href="#" class="el_btn bl_card_btn">ONLINE STORE</a>
+              </div>
+            </div>
+          </div>
+          <div class="bl_colItem bl_card_wrapper">
+            <div class="bl_card">
+              <figure class="bl_card_figure bl_card_figure__material">
+                <img src="./img/img_furniture_01.jpg" alt="" class="bl_card_img">
+              </figure>
+              <div class="bl_card_info">
+                <p class="bl_card_ttl bl_card_ttl__material">素材で探す</p>
+                <p class="bl_card_txt bl_card_txt__material">
+                  チークやパイン、マホガニーやウォールナットなどの木材から、ファブリックやラタンなどの布・繊維、ステンレスやロートアイアンのような金属まで、あらゆる素材を使用した家具を取り揃えております。</p>
+                <a href="#" class="el_btn bl_card_btn">ONLINE STORE</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- / 取扱家具 -->
+
+    <!-- 販売 -->
+    <div class="bl_sell_wrapper">
+      <div class="bl_sell">
+        <div class="bl_sell_item">
+          <figure class="bl_sell_figure">
+            <img src="./img/img_store.jpg" alt="" class="bl_sell_img">
+          </figure>
+          <div class="bl_sell_info">
+            <div class="bl_sell_ttl">販売店・展示場一覧</div>
+            <div class="bl_sell_txt">KAGUの販売店をご覧いただけます。<br>
+              また、KAGUの家具は全国のショールームにてご覧いただけます。</div>
+            <a href="" class="bl_sell_link el_link el_link__store">販売店・展示場一覧を見る</a>
+          </div>
+        </div>
+        <div class="bl_sell_item">
+          <figure class="bl_sell_figure bl_sell_figure__online">
+            <img src="./img/img_online.jpg" alt="" class="bl_sell_img">
+          </figure>
+          <div class="bl_sell_info">
+            <div class="bl_sell_ttl bl_sell_ttl__online">ONLINE STORE</div>
+            <div class="bl_sell_txt bl_sell_txt__online">KAGUの家具はオンラインストアでもご購入いただけます。</div>
+            <a href="" class="bl_sell_link el_link el_link__online">オンラインストアを見る</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / 販売 -->
+
+
+    <!-- CTA -->
+    <%# ----------------_ctaを読み込む---------------- %>
+    <%- include('./_cta.ejs') %>
+    <!-- CTA -->
+
+  </main>
+
+  <!-- FOOTER -->
+  <%# ----------------_footerを読み込む---------------- %>
+  <!-- <%- include('./_footer.ejs') %>
+  <!-- / FOOTER -->
+
+</body>
+
+</html>

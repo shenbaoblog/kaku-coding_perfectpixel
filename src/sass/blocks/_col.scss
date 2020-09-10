@@ -1,0 +1,107 @@
+// カラム変更準備
+.bl_colUnit {
+  display: flex;
+  flex-wrap: wrap;
+  > .bl_colItem {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+
+
+// 2カラム
+$sp_col2_marginBottom: -20px;
+.bl_colUnit {
+  &.bl_colUnit__col2 {
+    margin-bottom: $sp_col2_marginBottom;
+  }
+  &__col2 {
+    > .bl_colItem {
+      margin-bottom: abs($sp_col2_marginBottom);
+    }
+  }
+}
+$tab_col2_marginBottom: -30px;
+@include mq("tab") {
+  .bl_colUnit {
+    &.bl_colUnit__col2 {
+      margin-bottom: $tab_col2_marginBottom;
+    }
+    &__col2 {
+      > .bl_colItem {
+        width: 48.78049%;
+        margin-right: 2.43902%;
+        margin-bottom: abs($tab_col2_marginBottom);
+      }
+      > .bl_colItem:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+// 3カラム
+// $sp_col123_marginBottom: -20px;
+// .bl_colUnit {
+//   &.bl_colUnit__col123 {
+//     max-width: 75%;
+//     margin-right: auto;
+//     margin-bottom: $sp_col123_marginBottom;
+//     margin-left: auto;
+//   }
+//   &__col123 {
+//     > .bl_colItem {
+//       width: 31.707%;
+//       margin-right: 2.43902%;
+//       margin-bottom: abs($sp_col123_marginBottom);
+//     }
+//     > .bl_colItem:nth-of-type(3n) {
+//       margin-right: 0;
+//     }
+//   }
+// }
+$tab_col123_marginBottom: -30px;
+@include mq("tab") {
+  .bl_colUnit {
+    &.bl_colUnit__col123 {
+      margin-bottom: $tab_col123_marginBottom;
+    }
+    &__col123 {
+      > .bl_colItem {
+        width: calc( (100% - 70px) / 2);
+        margin-right: 70px;
+        margin-bottom: abs($tab_col123_marginBottom);
+      }
+      > .bl_colItem:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+$pc_col123_marginBottom: -30px;
+@include mq("pc") {
+  .bl_colUnit {
+    &.bl_colUnit__col123 {
+      margin-bottom: $pc_col123_marginBottom;
+    }
+    &__col123 {
+      > .bl_colItem {
+        width: calc( (100% - 70px * 2) / 3 );
+        margin-right: 70px;
+        margin-bottom: abs($pc_col123_marginBottom);
+      }
+      > .bl_colItem:nth-of-type(2n) {
+        margin-right: 70px;
+      }
+      > .bl_colItem:nth-of-type(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+
+

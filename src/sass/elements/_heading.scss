@@ -1,0 +1,40 @@
+.el_h2_01 {
+  margin-bottom: 4px;
+  margin-left: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: .15em;
+  text-align: center;
+  &.el_h2_01__furniture {
+    margin-left: 2px;
+  }
+  &.el_h2_01__recruit {
+    margin-left: 3px;
+  }
+}
+@include mq("pc") {
+  .el_h2_01 {
+    margin-bottom: 7px;
+    margin-left: 6px;
+    font-size: 24px;
+  }
+}
+
+.el_supplement {
+  // margin-left: 5px;
+  color: #aa8f7b;
+  font-size: 14px;
+  letter-spacing: .04em;
+  text-align: center;
+  &.el_supplement__notice {
+    margin-left: 1px;
+  }
+}
+@include mq("pc") {
+  .el_supplement {
+    margin-left: 1px;
+    font-size: 15px;
+  }
+}
+
+
